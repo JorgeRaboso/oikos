@@ -10,9 +10,7 @@
 </template>
 
 <script>
-    import WizardControl from '@/mixins/wizardControl'
     export default {
-        mixins: [WizardControl],
         props: {
             step: {
                 type: Number,

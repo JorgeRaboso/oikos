@@ -48,12 +48,16 @@ s
 
 <style lang="scss" scoped>
   .c-results {
+    &--expand {
+      @include rem(padding-bottom,100px);
+    }
+
     &__inner {
       @include rem(padding,16px);
     }
 
     &__heading {
-      @include rem(margin-bottom,8px);
+      @include rem(margin-bottom,16px);
     }
 
     &__title {
@@ -70,6 +74,15 @@ s
 
       @include rem(font-size, 14px);
       @include rem(line-height, 17px);
+    }
+
+    &__content {
+      display: grid;
+      grid-gap: 16px;
+
+      @media (min-width: 620px) {
+        grid-template-columns: 1fr 1fr;
+      }
     }
   }
 </style>

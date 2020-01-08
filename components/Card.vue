@@ -5,29 +5,41 @@
                 <img :src="media">
             </div>
             <div class="c-card__content">
-                <div class="c-card__days">
-                    {{ days }}
-                </div>
-                <div class="c-card__destination">
-                    {{ destination }}
-                </div>
-                <div class="c-card__price">
-                    <div class="c-card__price-text">
-                        {{ price.text }}
+                <div class="c-card__text">
+                    <div class="c-card__days">
+                        {{ days }}
                     </div>
-                    <div class="c-card__price-old">
-                        {{ price.old }}
-                    </div>
-                    <div class="c-card__price-value">
-                        {{ price.value }}
+                    <div class="c-card__destination">
+                        {{ destination }}
                     </div>
                 </div>
+                <button class="c-card__price">
+                    <div class="c-card__price-info">
+                        <div class="c-card__price-text">
+                            {{ price.text }}
+                        </div>
+                        <div class="c-card__price-old">
+                            {{ price.old }}
+                        </div>
+                        <div class="c-card__price-value">
+                            {{ price.value }}
+                        </div>
+                    </div>
+                    <div class="c-card__price-icon">
+                        <ChevronLeft />
+                    </div>
+                </button>
             </div>
         </div>
     </div>
 </template>
 <script>
+    import ChevronLeft from '@/components/ChevronLeft.vue'
+
     export default {
+        components: {
+            ChevronLeft
+        },
         props: {
             destination: {
                 type: String,
@@ -54,7 +66,12 @@
     &__inner {
       display: grid;
       grid-template-columns: 1fr;
-      padding: 16px;
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
 
     &__media {
@@ -62,9 +79,15 @@
       position: relative;
       grid-column: 1/2;
       grid-row: 1/2;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 1px 5px 0 rgba(0, 49, 117, 0.39);
 
       img {
         display: block;
+        width: 100%;
+        object-fit: cover;
+        max-height: 200px;
       }
 
       &::before {
@@ -82,13 +105,18 @@
       position: relative;
       grid-column: 1/2;
       grid-row: 1/2;
+      display: flex;
+      flex-direction: column;
+
+      @include rem(padding, 8px 8px 8px 0);
     }
 
     &__days {
       background: #003175;
       color: #fff;
+      letter-spacing: -0.43px;
 
-      @include rem(padding, 8px 4px);
+      @include rem(padding, 4px 8px);
       @include rem(font-size, 14px);
       @include rem(line-height, 17px);
     }
@@ -97,13 +125,72 @@
       background: #fff;
       color: #003175;
 
-      @include rem(padding, 8px 4px);
+      @include rem(padding, 8px 8px);
       @include rem(font-size, 18px);
       @include rem(line-height, 23px);
     }
 
     &__price {
-      color: #fff;
+      display: flex;
+      align-self: flex-end;
+      margin-top: auto;
+
+      &:hover {
+        .c-card__price-icon {
+          background: darken($color-secondary, 10%);
+        }
+      }
+
+      &-info {
+        background: #fff;
+        color: $color-primary;
+        display: grid;
+        grid-template-columns: auto auto;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+        border-radius: 2px 0 0 2px;
+
+        @include rem(padding, 4px 8px);
+      }
+
+      &-icon {
+        background: $color-secondary;
+        display: flex;
+        flex-direction: columns;
+        justify-content: center;
+        transition: 0.3s background;
+
+        @include rem(padding, 8px 16px);
+      }
+
+      &-text {
+        @include rem(font-size, 14px);
+        @include rem(line-height, 18px);
+
+        justify-self: end;
+        letter-spacing: -0.43px;
+        text-transform: capitalize;
+      }
+
+      &-old {
+        @include rem(font-size, 14px);
+        @include rem(line-height, 18px);
+        @include rem(padding-left, 4px);
+
+        letter-spacing: -0.43px;
+      }
+
+      &-value {
+        width: 100%;
+
+        @include rem(font-size, 22px);
+        @include rem(line-height, 21px);
+
+        grid-column: 1/-1;
+        text-align: right;
+        font-weight: 700;
+      }
     }
   }
 </style>

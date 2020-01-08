@@ -11,12 +11,10 @@
 
 <script>
     import Option from '@/components/Option'
-    import wizardControl from '@/mixins/wizardControl'
     export default {
         components: {
             Option
         },
-        mixins: [wizardControl],
         props: {
             options: {
                 type: Array,
