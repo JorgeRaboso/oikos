@@ -36,14 +36,15 @@
                 })
             },
             setValue () {
-                this.$store.commit('nextStep')
                 this.selected = !this.selected
                 this.resetActive()
-                if (this.$store.state.counter === 3) {
+                this.$store.commit('wizard/nextStep')
+                if (this.$store.state.wizard.counter === this.$store.state.wizard.components.length) {
                     this.gotToResultPage()
                 }
             }
         }
+
     }
 </script>
 

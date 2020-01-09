@@ -2,13 +2,14 @@
     <div class="c-wizard">
         <transition name="slide-fade" appear>
             <keep-alive>
-                <component :is="this.$store.state.components[this.$store.state.counter]" class="c-wizard__step" />
+                <component :is="$store.state.wizard.components[$store.state.wizard.counter]" class="c-wizard__step" />
             </keep-alive>
         </transition>
     </div>
 </template>
 
 <script>
+
     import WizardStepType from '@/components/WizardStepType'
     import WizardStepDestination from '@/components/WizardStepDestination'
     import WizardStepMonth from '@/components/WizardStepMonth'
@@ -17,12 +18,6 @@
             WizardStepType,
             WizardStepDestination,
             WizardStepMonth
-        },
-        props: {
-            data: {
-                type: Object,
-                default: () => {}
-            }
         }
     }
 </script>
@@ -44,8 +39,7 @@
   }
 
   .slide-fade-enter,
-  .slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
+  .slide-fade-leave-to {
     transform: translateX(-10%);
     opacity: 0;
   }

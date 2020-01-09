@@ -2,12 +2,12 @@
     <div class="c-arrows">
         <button
             class="c-arrows__item c-arrows__item--prev"
-            :class="{'is-active' : this.$store.state.counter >= 1 }"
+            :class="{'is-active' : this.$store.state.wizard.counter >= 1 }"
         >
-            <ArrowLeft @click.native="prev" />
+            <ArrowLeft @click.native="prevStep" />
         </button>
         <button class="c-arrows__item c-arrows__item--next">
-            <ArrowRight @click.native="next" />
+            <ArrowRight @click.native="nextStep" />
         </button>
     </div>
 </template>
@@ -21,11 +21,11 @@
             ArrowRight
         },
         methods: {
-            prev () {
-                this.$store.commit('prevStep')
+            prevStep () {
+                this.$store.commit('wizard/prevStep')
             },
-            next () {
-                this.$store.commit('nextStep')
+            nextStep () {
+                this.$store.commit('wizard/nextStep')
             }
         }
     }

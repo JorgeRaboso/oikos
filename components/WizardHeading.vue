@@ -42,7 +42,7 @@
         },
         methods: {
             resetWizard () {
-                this.$store.commit('resetStep')
+                this.$store.commit('wizard/resetStep')
             }
         }
     }

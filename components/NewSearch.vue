@@ -1,7 +1,7 @@
 <template>
     <div class="c-new-search">
         <div class="c-new-search__inner">
-            <nuxt-link to="/" class="c-new-search__button" @click.native="resetWizard">
+            <nuxt-link to="/wizard" class="c-new-search__button" @click.native="resetWizard">
                 <Button :text="button" />
             </nuxt-link>
         </div>
@@ -21,7 +21,7 @@
         },
         methods: {
             resetWizard () {
-                this.$store.commit('resetStep')
+                this.$store.commit('wizard/resetStep')
             }
         }
     }

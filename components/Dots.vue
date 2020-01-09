@@ -1,10 +1,10 @@
 <template>
     <div class="c-dots">
         <button
-            v-for="(dot, i) in $store.state.components.length"
+            v-for="(dot, i) in $store.state.wizard.components.length"
             :key="dot.id"
             class="c-dots__item"
-            :class="{'is-active':($store.state.counter ) >= i}"
+            :class="{'is-active':($store.state.wizard.counter ) >= i}"
         ></button>
     </div>
 </template>

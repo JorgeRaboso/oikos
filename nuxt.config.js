@@ -45,8 +45,7 @@ export default {
     styleResources: {
         scss: [
             'assets/scss/global.mixins.scss',
-            'assets/scss/global.variables.scss',
-            '~sass-rem'
+            'assets/scss/global.variables.scss'
         ]
     },
 
