@@ -28,8 +28,7 @@
   .c-wizard-options {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
-    @include rem(padding-top, 32px);
-    @include rem(grid-gap, 16px);
+    padding-top: rem(32px);
+    grid-gap: rem(16px);
   }
 </style>

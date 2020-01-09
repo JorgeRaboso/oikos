@@ -72,15 +72,14 @@
     }
 
     &__media {
-      @include rem(margin-bottom, 8px);
-
+      margin-bottom: rem(8px);
       pointer-events: none;
 
       img {
         margin: 0 auto;
         display: block;
-        max-width: 85px;
-        max-height: 85px;
+        max-width: rem(85px);
+        max-height: rem(85px);
         width: 100%;
         height: 100%;
         transition: 0.3s transform;
@@ -88,8 +87,7 @@
     }
 
     &__title {
-      @include rem(font-size, 15px);
-
+      font-size: rem(15px);
       pointer-events: none;
       text-transform: uppercase;
       text-align: center;

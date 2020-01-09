@@ -52,7 +52,7 @@
       }
 
       &:first-child {
-        @include rem(margin-right, 16px);
+        margin-right: rem(16px);
       }
     }
   }

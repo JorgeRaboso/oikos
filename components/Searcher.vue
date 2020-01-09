@@ -41,27 +41,25 @@
   .c-searcher {
     color: $color-primary;
     background: url(/media/searcher.png) no-repeat center center/cover;
+    padding: rem(16px 8px);
 
-    @include rem(padding, 16px 8px);
+    //@include rem(padding, 16px 8px);
 
     &__inner {
       display: flex;
       flex-direction: column;
-
-      @include rem(padding-bottom, 48px);
+      padding-bottom: rem(48px);
     }
 
     &__title {
-      @include rem(font-size, 22px);
-      @include rem(line-height, 28px);
-      @include rem(margin-bottom, 16px);
-
+      font-size: rem(22px);
+      line-height: rem(28px);
+      margin-bottom: rem(16px);
       font-weight: 700;
     }
 
     &__box {
-      @include rem(padding,16px);
-
+      padding: rem(16px);
       background: #fff;
       box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.18);
       border-radius: 2px;
@@ -69,9 +67,9 @@
 
     &__text {
       p {
-        @include rem(margin-bottom, 16px);
-        @include rem(font-size, 15px);
-        @include rem(line-height, 19px);
+        margin-bottom: rem(16px);
+        font-size: rem(15px);
+        line-height: rem(19px);
 
         &:last-child {
           margin-bottom: 0;
@@ -80,8 +78,7 @@
     }
 
     &__button {
-      @include rem(margin-top, 32px);
-
+      margin-top: rem(32px);
       display: block;
     }
   }

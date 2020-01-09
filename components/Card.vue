@@ -108,27 +108,24 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-
-      @include rem(padding, 8px 8px 8px 0);
+      padding: rem(8px 8px 8px 0);
     }
 
     &__days {
       background: #003175;
       color: #fff;
       letter-spacing: -0.43px;
-
-      @include rem(padding, 4px 8px);
-      @include rem(font-size, 14px);
-      @include rem(line-height, 17px);
+      padding: rem(4px 8px);
+      font-size: rem(14px);
+      line-height: rem(17px);
     }
 
     &__destination {
       background: #fff;
       color: #003175;
-
-      @include rem(padding, 8px 8px);
-      @include rem(font-size, 18px);
-      @include rem(line-height, 23px);
+      padding: rem(8px 8px);
+      font-size: rem(18px);
+      line-height: rem(23px);
     }
 
     &__price {
@@ -144,8 +141,7 @@
         align-items: center;
         justify-content: flex-end;
         border-radius: 2px 0 0 2px;
-
-        @include rem(padding, 4px 8px);
+        padding: rem(4px 8px);
       }
 
       &-icon {
@@ -155,8 +151,7 @@
         justify-content: center;
         transition: 0.3s background;
         border-radius: 0 4px 4px 0;
-
-        @include rem(padding, 8px 16px);
+        padding: rem(8px 16px);
       }
 
       &:hover {
@@ -166,28 +161,24 @@
       }
 
       &-text {
-        @include rem(font-size, 14px);
-        @include rem(line-height, 18px);
-
+        font-size: rem(14px);
+        line-height: rem(18px);
         justify-self: end;
         letter-spacing: -0.43px;
         text-transform: capitalize;
       }
 
       &-old {
-        @include rem(font-size, 14px);
-        @include rem(line-height, 18px);
-        @include rem(padding-left, 4px);
-
+        font-size: rem(14px);
+        line-height: rem(18px);
+        padding-left: rem(4px);
         letter-spacing: -0.43px;
       }
 
       &-value {
         width: 100%;
-
-        @include rem(font-size, 22px);
-        @include rem(line-height, 21px);
-
+        font-size: rem(22px);
+        line-height: rem(21px);
         grid-column: 1/-1;
         text-align: right;
         font-weight: 700;

@@ -23,11 +23,9 @@
     text-transform: uppercase;
     color: #fff;
     text-align: center;
-
-    @include rem(font-size, 18px);
-    @include rem(line-height, 22px);
-    @include rem(padding, 12px 16px);
-
+    font-size: rem(18px);
+    line-height: rem(22px);
+    padding: rem(12px 16px);
     letter-spacing: 0.64px;
     transition: 0.3s background;
     cursor: pointer;

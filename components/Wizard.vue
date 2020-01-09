@@ -30,8 +30,7 @@
 <style lang="scss" scoped>
   .c-wizard {
     &__step {
-      @include rem(padding,16px);
-
+      padding: rem(16px);
       background: #fff;
     }
   }

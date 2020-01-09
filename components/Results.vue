@@ -49,31 +49,29 @@ s
 <style lang="scss" scoped>
   .c-results {
     &--expand {
-      @include rem(padding-bottom,100px);
+      padding-bottom: rem(100px);
     }
 
     &__inner {
-      @include rem(padding,16px);
+      padding: rem(16px);
     }
 
     &__heading {
-      @include rem(margin-bottom,16px);
+      margin-bottom: rem(16px);
     }
 
     &__title {
       font-weight: 700;
       color: $color-primary;
-
-      @include rem(font-size, 22px);
-      @include rem(line-height, 27px);
+      font-size: rem(22px);
+      line-height: rem(27px);
     }
 
     &__text {
       font-weight: 300;
       color: $color-secondary;
-
-      @include rem(font-size, 14px);
-      @include rem(line-height, 17px);
+      font-size: rem(14px);
+      line-height: rem(17px);
     }
 
     &__content {

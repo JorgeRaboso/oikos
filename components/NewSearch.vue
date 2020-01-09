@@ -36,16 +36,11 @@
     bottom: 0;
 
     &__inner {
-      @include rem(padding, 16px);
-      @include rem(margin, 0 4px);
-
+      padding: rem(16px);
+      margin: rem(0 4px);
       background: #fff;
       box-shadow: 0 1px 4px 0 rgba(191, 191, 191, 0.9);
       border-radius: 4px;
     }
-
-    &__button {
-    }
   }
-
 </style>

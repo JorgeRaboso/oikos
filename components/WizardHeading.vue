@@ -58,10 +58,8 @@
       grid-area: claim;
       color: #666;
       align-self: center;
-
-      @include rem (font-size, 16px);
-      @include rem (line-height, 17px);
-
+      font-size: rem (16px);
+      line-height: rem (17px);
       font-weight: 300;
     }
 
@@ -74,15 +72,13 @@
       grid-area: title;
       color: $color-primary;
       font-weight: 700;
-
-      @include rem (margin-top, 16px);
-      @include rem (font-size, 22px);
-      @include rem (line-height, 27px);
+      margin-top: rem ( 6px);
+      font-size: rem (22px);
+      line-height: rem (27px);
     }
 
     &__arrows {
-      @include rem (margin-top, 16px);
-
+      margin-top: rem (16px);
       grid-area: arrows;
       justify-self: end;
       align-self: center;
@@ -90,16 +86,14 @@
 
     &__dots {
       grid-area: dots;
-
-      @include rem (margin, 16px 0);
+      margin: rem (16px 0);
     }
 
     &__text {
       grid-area: text;
       color: $color-primary;
-
-      @include rem (font-size, 16px);
-      @include rem (line-height, 20px);
+      font-size: rem ( 16px);
+      line-height: rem (20px);
     }
   }
 </style>

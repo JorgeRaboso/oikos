@@ -17,13 +17,15 @@
 <style lang="scss" scoped>
   .c-header {
     background: $color-primary;
-    @include rem(padding,16px);
+    padding: rem(16px);
+
     &__logo {
-        img {
-            display: block;
-            height: 64px;
-        }
+      img {
+        display: block;
+        height: rem(64px);
+      }
     }
+
     &__inner {
       display: flex;
       align-items: center;
