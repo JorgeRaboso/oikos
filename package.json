@@ -9,7 +9,8 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "linter": "eslint --fix '**/**/*.{js,vue}' && stylelint --fix '**/**/*.{scss,vue}'"
+    "linter": "eslint --fix '**/**/*.{js,vue}' && stylelint --fix '**/**/*.{scss,vue}'",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "nuxt": "^2.0.0"

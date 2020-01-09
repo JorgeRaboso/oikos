@@ -107,6 +107,7 @@
       grid-row: 1/2;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
 
       @include rem(padding, 8px 8px 8px 0);
     }
@@ -133,13 +134,6 @@
     &__price {
       display: flex;
       align-self: flex-end;
-      margin-top: auto;
-
-      &:hover {
-        .c-card__price-icon {
-          background: darken($color-secondary, 10%);
-        }
-      }
 
       &-info {
         background: #fff;
@@ -160,8 +154,15 @@
         flex-direction: columns;
         justify-content: center;
         transition: 0.3s background;
+        border-radius: 0 4px 4px 0;
 
         @include rem(padding, 8px 16px);
+      }
+
+      &:hover {
+        .c-card__price-icon {
+          background: darken($color-secondary, 10%);
+        }
       }
 
       &-text {
