@@ -1,11 +1,11 @@
-const state = {
+const state = () => ({
     counter: 0,
     components: [
         'WizardStepType',
         'WizardStepDestination',
         'WizardStepMonth'
     ]
-}
+})
 
 const mutations = {
     nextStep (state) {
